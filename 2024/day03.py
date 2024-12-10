@@ -1,4 +1,4 @@
-#! /usr/bin/env/python
+#! /usr/bin/env python
 import re
 
 from utils import input_text, input_lines
