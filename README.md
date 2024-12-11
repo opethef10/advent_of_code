@@ -7,9 +7,14 @@ Welcome to my solutions for [Advent of Code](https://adventofcode.com), an annua
 - Within each year:
   - Solutions are organized as `dayXX.py` files, where `XX` corresponds to the day of the puzzle.
   - A `utils.py` file provides helper functions for common tasks, such as reading inputs, parsing data, or other repetitive operations.
+  - Inputs are expected to be stored locally in:
+    - `inputs/` for actual puzzle inputs.
+    - `example_inputs/` for example inputs provided in the challenge description.
 
 ## Note on Inputs
-Puzzle input files are not included in this repository in accordance with Advent of Code's [Terms of Service](https://adventofcode.com/2024/about). If you'd like to run these solutions with your inputs, you'll need to supply them yourself. The `utils.py` file can assist in handling input files and other utility tasks.
+Puzzle input files are expected to be stored locally in the `inputs/` and `example_inputs/` folders, which are `.gitignore`-protected and not included in the repository to comply with Advent of Code's [Terms of Service](https://adventofcode.com/2024/about). Each solution file (e.g., `day01.py`) corresponds to an input file of the same name (e.g., `inputs/day01.txt`).
+
+If you'd like to run these solutions, you can replicate the input folder structure to match the examples above.
 
 ## Goals
 - Practice Python programming.
