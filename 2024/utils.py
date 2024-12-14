@@ -23,7 +23,7 @@ def input_path(path_str) -> Path:
 
     return input_path if not args.example else example_input_path
 
-def input_lines(path_str) -> str:
+def input_lines(path_str) -> list[str]:
     path = input_path(path_str)
     with path.open() as file:
         lines = file.readlines()
