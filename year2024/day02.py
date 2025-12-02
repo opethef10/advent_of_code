@@ -1,7 +1,8 @@
-#! /usr/bin/env python
-from utils import input_text, input_lines
+#!/usr/bin/env python
 
 THRESHOLD = 3
+
+
 def safety_check(report):
     deltas = []
     for a, b in zip(report[:-1], report[1:]):
@@ -18,12 +19,10 @@ def safety_check(report):
     return True
 
 
-if __name__ == "__main__":
-    lines = input_lines(__file__)
-
+def solve(lines, text):
     safe = 0
     for line in lines:
-        report = list(map(int,line.split()))
+        report = list(map(int, line.split()))
         safe += int(safety_check(report))
 
-    print(safe)
+    return safe

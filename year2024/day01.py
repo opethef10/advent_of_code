@@ -1,10 +1,7 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 
-from utils import input_text, input_lines
 
-if __name__ == "__main__":
-    lines = input_lines(__file__)
-
+def solve(lines, text):
     first, second = [], []
     for line in lines:
         a, b = line.split()
@@ -15,4 +12,4 @@ if __name__ == "__main__":
 
     total_1 = sum(abs(s - f) for f, s in zip(first, second))
     total_2 = sum(f * second.count(f) for f in first)
-    print(total_1, total_2)
+    return total_1, total_2
