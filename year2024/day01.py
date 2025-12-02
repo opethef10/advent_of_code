@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-
 def solve(lines, text):
     first, second = [], []
     for line in lines:

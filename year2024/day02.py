@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 THRESHOLD = 3
 
 

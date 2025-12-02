@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from operator import add, mul
 
 OPS = add, mul
