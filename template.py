@@ -1,6 +1,6 @@
-def part1(lines, text):
+def part1(lines: list[str], text: str):
     pass
 
 
-def part2(lines, text):
+def part2(lines: list[str], text: str):
     pass
