@@ -12,7 +12,7 @@ RIGHT = 0, +1
 DIRECTIONS = cycle([UP, RIGHT, DOWN, LEFT])
 
 
-def solve(lines, text):
+def part1(lines, text):
     maze = [line.strip() for line in lines]
     height = len(maze)
     width = len(maze[0])
@@ -52,3 +52,7 @@ def solve(lines, text):
             visited_coords.add(pos)
 
     return len(visited_coords)
+
+
+def part2(lines, text):
+    return

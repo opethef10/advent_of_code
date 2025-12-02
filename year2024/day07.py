@@ -3,7 +3,7 @@ from operator import add, mul
 OPS = add, mul
 
 
-def solve(lines, text):
+def part1(lines, text):
     total = 0
     for line in lines:
         test, rest = line.split(":")
@@ -25,3 +25,7 @@ def solve(lines, text):
                 total += test
                 break
     return total
+
+
+def part2(lines, text):
+    return

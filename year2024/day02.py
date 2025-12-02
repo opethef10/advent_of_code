@@ -17,10 +17,14 @@ def safety_check(report):
     return True
 
 
-def solve(lines, text):
+def part1(lines, text):
     safe = 0
     for line in lines:
         report = list(map(int, line.split()))
         safe += int(safety_check(report))
 
     return safe
+
+
+def part2(lines, text):
+    return

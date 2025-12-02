@@ -2,7 +2,7 @@ WORD = "XMAS"
 
 
 
-def solve(lines, text):
+def part1(lines, text):
     n = len(lines)
     m = len(lines[0])
     limit = n * m - 1
@@ -99,3 +99,7 @@ def solve(lines, text):
             )
         )
     return total
+
+
+def part2(lines, text):
+    return

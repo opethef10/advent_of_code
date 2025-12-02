@@ -18,5 +18,5 @@ if __name__ == "__main__":
     text = input_text(input_file_path)
 
     module = get_module(args.year, args.day)
-    result = module.solve(lines, text)
-    print(result)
+    print(module.part1(lines, text))
+    print(module.part2(lines, text))
