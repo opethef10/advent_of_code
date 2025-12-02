@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import argparse
 
-from utils import input_path, input_lines, input_text, get_module, create_day
+from utils import create_day, get_module, get_input_path
 
 
 if __name__ == "__main__":
@@ -17,9 +17,9 @@ if __name__ == "__main__":
     if args.add:
         create_day(args.year, args.day)
     else:
-        input_file_path = input_path(args.year, args.day, args.example)
-        lines = input_lines(input_file_path)
-        text = input_text(input_file_path)
+        input_file_path = get_input_path(args.year, args.day, args.example)
+        text = input_file_path.read_text()
+        lines = text.splitlines()
 
         module = get_module(args.year, args.day)
         print(module.part1(lines, text))

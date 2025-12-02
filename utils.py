@@ -16,8 +16,8 @@ def create_day(year: int, day: int):
     day_stem = f"day{day:02d}"
 
     day_path = year_dir / f"{day_stem}.py"
-    input_path = year_dir / "inputs" / f"{day_stem}.txt"
-    example_input_path = year_dir / "example_inputs" / f"{day_stem}.txt"
+    input_path = get_input_path(year, day, example=False)
+    example_input_path = get_input_path(year, day, example=True)
 
     created = 0
     if not day_path.exists():
@@ -42,18 +42,8 @@ def create_day(year: int, day: int):
         print("All files already exist.")
 
 
-def input_path(year: int, day: int, example: bool = False) -> Path:
+def get_input_path(year: int, day: int, example: bool = False) -> Path:
     year_dir = MAIN_DIR / f"year{year}"
     file_stem = f"day{day:02d}"
     input_folder_name = "example_inputs" if example else "inputs"
     return year_dir / input_folder_name / f"{file_stem}.txt"
-
-
-def input_lines(path: Path) -> list[str]:
-    with path.open() as file:
-        lines = file.readlines()
-    return lines
-
-
-def input_text(path: Path) -> str:
-    return path.read_text()
