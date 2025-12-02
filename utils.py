@@ -1,6 +1,8 @@
 import importlib
 from pathlib import Path
 
+MAIN_DIR = Path(__file__).parent
+
 
 def get_module(year: int, day: int):
     module_name = f"year{year}.day{day:02d}"
@@ -8,11 +10,10 @@ def get_module(year: int, day: int):
 
 
 def input_path(year: int, day: int, example: bool = False) -> Path:
-    path = Path(f"year{year}/day{day:02d}.py")
-    file_stem = path.stem
-    parent_dir = path.parent
+    year_dir = MAIN_DIR / f"year{year}"
+    file_stem = f"day{day:02d}"
     input_folder_name = "example_inputs" if example else "inputs"
-    return parent_dir / input_folder_name / f"{file_stem}.txt"
+    return year_dir / input_folder_name / f"{file_stem}.txt"
 
 
 def input_lines(path: Path) -> list[str]:
